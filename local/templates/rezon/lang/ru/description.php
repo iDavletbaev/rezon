@@ -1,0 +1,3 @@
+<?php
+$MESS["CSST_TEMPLATE_NAME"] = "Rezon";
+$MESS["CSST_TEMPLATE_DESC"] = "";

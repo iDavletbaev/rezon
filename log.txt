@@ -1,0 +1,22 @@
+Host: rezon.service6.beget.tech
+Date: 2025-03-25 10:41:10
+array (
+  'idelement' => '24',
+  'BITRIX_SM_UIDH' => 'dw5A2d5V5MzhyofIXRdXQVQoWC6JLsMa',
+  'BITRIX_SM_UIDL' => 'admin',
+  'BITRIX_SM_LOGIN' => 'admin',
+  'BITRIX_SM_SOUND_LOGIN_PLAYED' => 'Y',
+  'PHPSESSID' => 'Yl5UoATUjYV7F02qvCQ5zMJjOqro7wYM',
+)
+----------
+Host: rezon.service6.beget.tech
+Date: 2025-03-25 10:41:10
+array (
+)
+----------
+Host: rezon.service6.beget.tech
+Date: 2025-03-25 10:41:10
+array (
+  'idelement' => '24',
+)
+----------
