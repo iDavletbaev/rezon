@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 <section class="main-special">
     <div class="main-special__box">
-        <a class="main-special__box--text">
+        <a class="main-special__box--text" href="/">
           <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9 15L2 8L9 1" stroke="#333333" stroke-width="2" stroke-linecap="round"/>
           </svg>

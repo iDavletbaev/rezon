@@ -75,6 +75,7 @@ $this->setFrameMode(true);
                         <p class="offers__content--slide-text">
                             <?=$item['PREVIEW_TEXT']?>
                         </p>
+                        <a class="offers__content--slide-button mobile">Подробнее</a>
                     </div>
                 </div>
                 <?php } ?>
@@ -96,7 +97,7 @@ $this->setFrameMode(true);
             <div class="offers__content--line-item">
             </div>
         </div>
-        <div class="offers__header--right special-offer-mobile">
+        <a href="/offer/" class="offers__header--right special-offer-mobile">
             <div class="offers__header--right-item">
                 <div>
                     <p class="offers__header--right-item-subtitle">Вилла 300 кв.м</p>
@@ -107,7 +108,7 @@ $this->setFrameMode(true);
             <div class="offers__header--right-item">
                 <p class="offers__header--right-item-city">г. Дубаи, Объединённых Арабских Эмиратах</p>
             </div>
-        </div>
+        </a>
     </div>
     <div class="modal-offers">
         <div class="modal-offers__container">

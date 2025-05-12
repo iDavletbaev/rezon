@@ -42,6 +42,7 @@ $GLOBALS['FIXED_LINKS']['WHATSAPP'] = $arResult['DISPLAY_PROPERTIES']['WHATSAPP'
         </div>
 
         <div class="menu__box">
+            <button class="header__container--button-active mobile"><?= $arResult['DISPLAY_PROPERTIES']['BTN_TEXT']['VALUE'] ?></button>
             <div class="menu__container">
                 <?php $APPLICATION->IncludeComponent(
                         "bitrix:menu",

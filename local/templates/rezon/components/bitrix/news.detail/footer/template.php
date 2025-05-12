@@ -13,6 +13,22 @@
 $this->setFrameMode(true);
 ?>
 <footer class="footer" id="footer">
+<div class="modal-form-sale" id="modal-form-success">
+  <div class="modal-form-sale__content">
+    <div class="modal-form-sale__content--title">
+      <span class="modal-form-sale__content--title-close">
+        <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.87207 1.13623L13.8039 13.068" stroke="#001E5F" stroke-width="0.795454" stroke-linecap="round"/>
+          <path d="M13.0684 1.13623L1.13654 13.068" stroke="#001E5F" stroke-width="0.795454" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </div>
+    <div class="modal-form-sale__box">
+      <h3>Заявка успешна отправлена!</h3>
+      <p>В ближайшее время наш менеджер свяжется с вами по номеру телефона или электронной почте, которые вы указали в анкете.</p>
+    </div>
+  </div>
+</div>
     <div class="container">
         <div class="footer__contacts">
             <div class="footer__contacts--menu">

@@ -80,11 +80,8 @@ $APPLICATION->IncludeComponent(
     ),
     false
 );
-
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.min.js?ver=1");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/forms.js");
 ?>
-<div class="modal-form">
+<!-- <div class="modal-form">
     <div class="form-container">
         <div class="form-header">
             <div class="form-header__content">
@@ -218,13 +215,6 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/forms.js");
                             </div>
                         </div>
 
-                        <!-- <select id="Target" name="Цель" class="target">
-                            <option value="Аренда" class="option-target">Аренда</option>
-                            <option value="Покупка" class="option-target">Покупка</option>
-                            <option value="Продажа" class="option-target">Продажа</option>
-                            <option value="Инвестирование" class="option-target">Инвестирование</option>
-                            <option value="Другое" class="option-target">Другое</option>
-                        </select> -->
                     </div>
                     <div class="custom-select">
 
@@ -262,17 +252,6 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/forms.js");
                                 </label>
                             </div>
                         </div>
-
-                        <!-- <label class="title-item" for="Страна">
-                          Страна (необязательно)
-                          <select name="Страна" class="country" id="Страна">
-                              <option value="Россия" class="option-country">Россия</option>
-                              <option value="ОАЭ" class="option-country">ОАЭ</option>
-                              <option value="Испания" class="option-country">Испания</option>
-                              <option value="Индонезия" class="option-country">Индонезия</option>
-                              <option value="Другое" class="option-country">Другое</option>
-                          </select>
-                      </label> -->
                     </div>
 
                     <label class="title-item" for="Бюджет">
@@ -355,22 +334,6 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/forms.js");
                             </div>
                         </div>
                     </div>
-                    <!-- <label for="peculiarities" class="title-item">
-                        Особенности недвижимости (необязательно)
-                        <select class="peculiarities-type" name="Особенности" id="peculiarities">
-                            <option value="Вид на море/озеро/горы" class="option-peculiarities">Вид на море/озеро/горы</option>
-                            <option value="Бассейн" class="option-peculiarities">Бассейн</option>
-                            <option value="Сад" class="option-peculiarities">Сад</option>
-                            <option value="Балкон/терраса" class="option-peculiarities">Балкон/терраса</option>
-                            <option value="Парковка" class="option-peculiarities">Парковка</option>
-                            <option value="Детская площадка" class="option-peculiarities">Детская площадка</option>
-                            <option value="Доступность инфраструктуры" class="option-peculiarities">Доступность инфраструктуры</option>
-                            <option value="Тихое место" class="option-peculiarities">Тихое место</option>
-                            <option value="Центральное расположение" class="option-peculiarities">Центральное расположение</option>
-                            <option value="Другое" class="option-peculiarities">Другое</option>
-                        </select>
-                    </label> -->
-                    <!-- <div class="additionally-commend"> -->
                     <label for="Commend" class="title-item">
                         Комментарий (необязательно)
                         <textarea class="commend-textarea" name="Commend" id="Commend"
@@ -380,7 +343,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/forms.js");
                         *Расскажите, пожалуйста, о своих увлечениях, о любимых местах и о распорядке дня, который вы
                         ведёте.
                     </p>
-                    <!-- </div> -->
+
                 </div>
             </div>
             <div class="form-bottom">
@@ -647,6 +610,510 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/forms.js");
             </div>
         </div>
     </div>
+</div> -->
+
+<div class="modal-form">
+  <div class="form-container">
+    <div class="form-header">
+      <div class="form-header__content">
+        <img class="form-header__logo" src="<?= SITE_TEMPLATE_PATH ?>/img/logo-rezon.png" alt="">
+        <div class="form-header__title">Подбор недвижемости</div>
+        <div class="form-header__close">
+  
+          Закрыть
+          <span class="modal-form-sale__content--title-close">
+            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.87207 1.13623L13.8039 13.068" stroke="#001E5F" stroke-width="0.795454" stroke-linecap="round"/>
+              <path d="M13.0684 1.13623L1.13654 13.068" stroke="#001E5F" stroke-width="0.795454" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+      <form id="formAnketa">
+          <input type="hidden" name="TYPE" value="fromAnketa">
+        <div class="form-content">
+
+      <div class="form">
+          <div class="form-data">
+              <h2 class="title">
+                  Общие данные
+              </h2>
+              <label class="title-item" for="Name">
+                  Имя*
+                  <input class="item-input" id="Name" type="text" name="NAME" placeholder="Введите ваше имя" required>
+              </label>
+              <label class="title-item" for="Tel">
+                  Телефон*
+                  <input class="item-input" id="Tel" type="tel" name="PHONE" placeholder="+79999999999" required>
+              </label>
+              <label class="title-item" for="Mail">
+                  Почта*
+                  <input class="item-input" id="Mail" type="email" name="EMAIL" placeholder="Введите вашу почту" required>
+              </label>
+          </div>
+          <div class="wishes">
+              <h2 class="title">
+                  Пожелания
+              </h2>
+              <div class="custom-select">
+                  <label class="title-item" for="Type">Тип недвижимости* (выбрать вариант)</label>
+                  <div class="select-wrapper">
+                      <div class="select-header">
+                          <span class="select-current">Выбрать</span>
+                          <svg class="select-icon" width="14" height="7" viewBox="0 0 14 7" fill="none">
+                              <path d="M1 1L7 6L13 1" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/>
+                          </svg>
+                      </div>
+                      <div class="select-dropdown">
+                        <label class="select-option">
+                          <span class="checkbox-text">Квартира</span>
+                          <input type="checkbox" class="custom-checkbox" name="property_type" value="Квартира">
+                        </label>
+                        <label class="select-option">
+                          <span class="checkbox-text">Дом</span>
+                          <input type="checkbox" class="custom-checkbox" name="property_type" value="Дом">
+                        </label>
+
+                          <label class="select-option">
+                            <span class="checkbox-text">Апартаменты</span>
+                            <input type="checkbox" class="custom-checkbox" name="property_type" value="Апартаменты">
+                          </label>
+                          <label class="select-option">
+                            <span class="checkbox-text">Таунхаус</span>
+                            <input type="checkbox" class="custom-checkbox" name="property_type" value="Таунхаус">
+                          </label>
+                          <label class="select-option">
+                            <span class="checkbox-text">Вилла</span>
+                            <input type="checkbox" class="custom-checkbox" name="property_type" value="Вилла">
+                          </label>
+                          <label class="select-option">
+                            <span class="checkbox-text">Земельный участок</span>
+                            <input type="checkbox" class="custom-checkbox" name="property_type" value="Земельный участок">
+                          </label>
+                          <label class="select-option">
+                            <span class="checkbox-text">Коммерческая недвижимость</span>
+                            <input type="checkbox" class="custom-checkbox" name="property_type" value="Коммерческая недвижимость">
+                          </label>
+                          <label class="select-option">
+                            <span class="checkbox-text">Другое</span>
+                            <input type="checkbox" class="custom-checkbox" name="property_type" value="Другое">
+                          </label>
+                      </div>
+                  </div>
+              </div>
+              <div class="custom-select">
+                 
+                  <label class="title-item" for="Target"> Цель* (выбрать вариант)</label>
+                  <div class="select-wrapper">
+                    <div class="select-header">
+                        <span class="select-current">Выбрать</span>
+                        <svg class="select-icon" width="14" height="7" viewBox="0 0 14 7" fill="none">
+                            <path d="M1 1L7 6L13 1" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="select-dropdown">
+                      <label class="select-option">
+                        <span class="checkbox-text">Аренда</span>
+                        <input type="checkbox" class="custom-checkbox" name="target" value="Аренда">
+                      </label>
+                      <label class="select-option">
+                        <span class="checkbox-text">Покупка</span>
+                        <input type="checkbox" class="custom-checkbox" name="target" value="Покупка">
+                      </label>
+  
+                        <label class="select-option">
+                          <span class="checkbox-text">Продажа</span>
+                          <input type="checkbox" class="custom-checkbox" name="target" value="Продажа">
+                        </label>
+                        <label class="select-option">
+                          <span class="checkbox-text">Инвестирование</span>
+                          <input type="checkbox" class="custom-checkbox" name="target" value="Инвестирование">
+                        </label>
+                        <label class="select-option">
+                          <span class="checkbox-text">Другое</span>
+                          <input type="checkbox" class="custom-checkbox" name="target" value="Другое">
+                        </label>
+                    </div>
+                </div>
+
+              </div>
+              <div class="custom-select">
+                 
+                <label class="title-item" for="Country">Страна (необязательно)</label>
+                <div class="select-wrapper">
+                  <div class="select-header">
+                      <span class="select-current">Выбрать</span>
+                      <svg class="select-icon" width="14" height="7" viewBox="0 0 14 7" fill="none">
+                          <path d="M1 1L7 6L13 1" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                  </div>
+                  <div class="select-dropdown">
+                    <label class="select-option">
+                      <span class="checkbox-text">Россия</span>
+                      <input type="checkbox" class="custom-checkbox" name="country" value="Россия">
+                    </label>
+                    <label class="select-option">
+                      <span class="checkbox-text">ОАЭ</span>
+                      <input type="checkbox" class="custom-checkbox" name="country" value="ОАЭ">
+                    </label>
+
+                      <label class="select-option">
+                        <span class="checkbox-text">Испания</span>
+                        <input type="checkbox" class="custom-checkbox" name="country" value="Испания">
+                      </label>
+                      <label class="select-option">
+                        <span class="checkbox-text">Индонезия</span>
+                        <input type="checkbox" class="custom-checkbox" name="country" value="Индонезия">
+                      </label>
+                      <label class="select-option">
+                        <span class="checkbox-text">Другое</span>
+                        <input type="checkbox" class="custom-checkbox" name="country" value="Другое">
+                      </label>
+                  </div>
+              </div>
+
+            </div>
+
+              <label class="title-item" for="Бюджет">
+                  Бюджет (необязательно) укажите сумму
+                  <input class="title-item-input" id="Бюджет" type="amount" name="BUDGET" placeholder="от 50 до 100 000">
+              </label>
+              <div class="currency">
+                  <button id="RUB" class="currency-btn active">RUB</button>
+                  <button id="USD" class="currency-btn">USD</button>
+                  <button id="EUR" class="currency-btn">EUR</button>
+                  <button id="AED" class="currency-btn">AED</button>
+                  <button id="GBP" class="currency-btn">GBP</button>
+              </div>
+          </div>
+    
+          <div class="additionally">
+              <h2 class="title">
+                  Дополнительно
+              </h2>
+              <div class="custom-select">
+                 
+                <label class="title-item" for="peculiarities">Особенности недвижимости (необязательно)</label>
+                <div class="select-wrapper">
+                  <div class="select-header">
+                      <span class="select-current">Выбрать</span>
+                      <svg class="select-icon" width="14" height="7" viewBox="0 0 14 7" fill="none">
+                          <path d="M1 1L7 6L13 1" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                  </div>
+                  <div class="select-dropdown">
+                    <label class="select-option">
+                      <span class="checkbox-text">Вид на море/озеро/горы</span>
+                      <input type="checkbox" class="custom-checkbox" name="feature" value="Вид на море/озеро/горы">
+                    </label>
+                    <label class="select-option">
+                      <span class="checkbox-text">Бассейн</span>
+                      <input type="checkbox" class="custom-checkbox" name="feature" value="Бассейн">
+                    </label>
+
+                      <label class="select-option">
+                        <span class="checkbox-text">Сад</span>
+                        <input type="checkbox" class="custom-checkbox" name="feature" value="Сад">
+                      </label>
+                      <label class="select-option">
+                        <span class="checkbox-text">Балкон/терраса</span>
+                        <input type="checkbox" class="custom-checkbox" name="feature" value="Балкон/терраса">
+                      </label>
+                      <label class="select-option">
+                        <span class="checkbox-text">Парковка</span>
+                        <input type="checkbox" class="custom-checkbox" name="feature" value="Парковка">
+                      </label>
+                      <label class="select-option">
+                        <span class="checkbox-text">Детская площадка</span>
+                        <input type="checkbox" class="custom-checkbox" name="feature" value="Детская площадка">
+                      </label>
+                      <label class="select-option">
+                        <span class="checkbox-text">Доступность инфраструктуры</span>
+                        <input type="checkbox" class="custom-checkbox" name="feature" value="Доступность инфраструктуры">
+                      </label>
+                      <label class="select-option">
+                        <span class="checkbox-text">Тихое место</span>
+                        <input type="checkbox" class="custom-checkbox" name="feature" value="Тихое место">
+                      </label>
+                      <label class="select-option">
+                        <span class="checkbox-text">Центральное расположение</span>
+                        <input type="checkbox" class="custom-checkbox" name="feature" value="Центральное расположение">
+                      </label>
+                      <label class="select-option">
+                        <span class="checkbox-text">Другое</span>
+                        <input type="checkbox" class="custom-checkbox" name="feature" value="Другое">
+                      </label>
+                  </div>
+              </div>
+            </div>
+              <label for="Commend" class="title-item">
+                  Комментарий (необязательно)
+              <textarea class="commend-textarea" name="Commend" id="Commend" placeholder="Напишите..."></textarea>
+              </label>
+                <p class="text">
+              *Расскажите, пожалуйста, о своих увлечениях, о любимых местах и о распорядке дня, который вы ведёте.
+                </p>
+          </div>
+      </div>
+      <div class="form-bottom">
+          <p class="text-bottom">
+              Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных.
+             <a href="#">
+                  Подробнее
+              </a>
+          </p>
+          <button class="send js_anket_form">
+              Отправить
+          </button>
+      </div>
+    </div>
+      </form>
+  </div>
+
+  <div class="form-container-mobile">
+    <div class="mobile-content">
+      <div class="form-header">
+        <img class="form-header__logo" src="<?= SITE_TEMPLATE_PATH ?>/img/logo-rezon.png" alt="">
+        <span class="modal-form-sale__content--title-close">
+          <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.87207 1.13623L13.8039 13.068" stroke="#001E5F" stroke-width="0.795454" stroke-linecap="round"/>
+            <path d="M13.0684 1.13623L1.13654 13.068" stroke="#001E5F" stroke-width="0.795454" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </div>
+
+      <div class="mobile-form">
+        <h2 class="title">Общие данные</h2>
+        <label class="title-item" for="Name">
+          Имя*
+          <input class="item-input" id="Name" type="text" name="Имя" placeholder="Введите ваше имя" required>
+        </label>
+        <label class="title-item" for="Tel">
+          Телефон*
+          <input class="item-input" id="Tel" type="tel" name="Телефон" placeholder="+7 999 999 99 99" required>
+        </label>
+        <label class="title-item" for="Mail">
+          Почта*
+          <input class="item-input" id="Mail" type="email" name="Почта" placeholder="Введите вашу почту" required>
+        </label>
+
+        <h2 class="title">Пожелания</h2>
+        <div class="title-item">
+          <p>Тип недвижемости* (выбрать вариант)</p>
+          <ul class="property-list">
+            <li class="option-type">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Квартира</span>
+                <input type="checkbox" class="custom-checkbox" name="property_type" value="Квартира">
+              </label>
+            </li>
+            <li class="option-type">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Дом</span>
+                <input type="checkbox" class="custom-checkbox" name="property_type" value="Дом">
+              </label>
+            </li>
+            <li class="option-type">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Апартаменты</span>
+                <input type="checkbox" class="custom-checkbox" name="property_type" value="Апартаменты">
+              </label>
+            </li>
+            <li class="option-type">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Таунхаус</span>
+                <input type="checkbox" class="custom-checkbox" name="property_type" value="Таунхаус">
+              </label>
+            </li>
+            <li class="option-type">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Вилла</span>
+                <input type="checkbox" class="custom-checkbox" name="property_type" value="Вилла">
+              </label>
+            </li>
+            <li class="option-type">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Земельный участок</span>
+                <input type="checkbox" class="custom-checkbox" name="property_type" value="Земельный участок">
+              </label>
+            </li>
+            <li class="option-type">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Коммерческая недвижимость</span>
+                <input type="checkbox" class="custom-checkbox" name="property_type" value="Коммерческая недвижимость">
+              </label>
+            </li>
+            <li class="option-type">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Другое</span>
+                <input type="checkbox" class="custom-checkbox" name="property_type" value="Другое">
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="title-item">
+          <p>Цель* (выбрать вариант)</p>
+          <ul class="target-list">
+            <li class="option-target">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Аренда</span>
+                <input type="checkbox" class="custom-checkbox" name="target" value="Аренда">
+              </label>
+            </li>
+            <li class="option-target">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Покупка</span>
+                <input type="checkbox" class="custom-checkbox" name="target" value="Покупка">
+              </label>
+            </li>
+            <li class="option-target">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Продажа</span>
+                <input type="checkbox" class="custom-checkbox" name="target" value="Продажа">
+              </label>
+            </li>
+            <li class="option-target">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Инвестирование</span>
+                <input type="checkbox" class="custom-checkbox" name="target" value="Инвестирование">
+              </label>
+            </li>
+            <li class="option-target">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Другое</span>
+                <input type="checkbox" class="custom-checkbox" name="target" value="Другое">
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="title-item">
+          <p>Страна (необязательно)</p>
+          <ul class="country-list">
+            <li class="option-country">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Россия</span>
+                <input type="checkbox" class="custom-checkbox" name="country" value="Россия">
+              </label>
+            </li>
+            <li class="option-country">
+              <label class="checkbox-label">
+                <span class="checkbox-text">ОАЭ</span>
+                <input type="checkbox" class="custom-checkbox" name="country" value="ОАЭ">
+              </label>
+            </li>
+            <li class="option-country">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Испания</span>
+                <input type="checkbox" class="custom-checkbox" name="country" value="Испания">
+              </label>
+            </li>
+            <li class="option-country">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Индонезия</span>
+                <input type="checkbox" class="custom-checkbox" name="country" value="Индонезия">
+              </label>
+            </li>
+            <li class="option-country">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Другое</span>
+                <input type="checkbox" class="custom-checkbox" name="country" value="Другое">
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <label class="title-item" for="Бюджет">
+          Бюджет (необязательно) укажите сумму
+          <input class="item-input" id="Бюджет" type="text" name="Бюджет" placeholder="от 50 до 100 000">
+        </label>
+        <div class="currency">
+          <button class="currency-btn active">RUB</button>
+          <button class="currency-btn">USD</button>
+          <button class="currency-btn">EUR</button>
+          <button class="currency-btn">AED</button>
+          <button class="currency-btn">GBP</button>
+        </div>
+
+        <h2 class="title">Дополнительно</h2>
+        <div class="title-item">
+          <p>Особенности недвижимости (необязательно)</p>
+          <ul class="peculiarities-list">
+            <li class="option-peculiarities">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Вид на море/озеро/горы</span>
+                <input type="checkbox" class="custom-checkbox" name="feature" value="Вид на море/озеро/горы">
+              </label>
+            </li>
+            <li class="option-peculiarities">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Бассейн</span>
+                <input type="checkbox" class="custom-checkbox" name="feature" value="Бассейн">
+              </label>
+            </li>
+            <li class="option-peculiarities">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Сад</span>
+                <input type="checkbox" class="custom-checkbox" name="feature" value="Сад">
+              </label>
+            </li>
+            <li class="option-peculiarities">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Балкон/терраса</span>
+                <input type="checkbox" class="custom-checkbox" name="feature" value="Балкон/терраса">
+              </label>
+            </li>
+            <li class="option-peculiarities">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Парковка</span>
+                <input type="checkbox" class="custom-checkbox" name="feature" value="Парковка">
+              </label>
+            </li>
+            <li class="option-peculiarities">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Детская площадка</span>
+                <input type="checkbox" class="custom-checkbox" name="feature" value="Детская площадка">
+              </label>
+            </li>
+            <li class="option-peculiarities">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Доступность инфраструктуры</span>
+                <input type="checkbox" class="custom-checkbox" name="feature" value="Доступность инфраструктуры">
+              </label>
+            </li>
+            <li class="option-peculiarities">
+              <label class="checkbox-label">
+                <span class="checkbox-text">Другое</span>
+                <input type="checkbox" class="custom-checkbox" name="feature" value="Другое">
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <label class="title-item" for="Comment">
+          Комментарий (необязательно)
+          <textarea class="commend-textarea" id="Comment" name="Комментарий" placeholder="Напишите..."></textarea>
+        </label>
+        <p class="text">
+          *Расскажите, пожалуйста, о своих увлечениях, о любимых местах и о распорядке дня, который вы ведёте.
+        </p>
+
+        <div class="form-bottom">
+          <p class="text-bottom">
+            Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных.
+            <a href="#">Подробнее</a>
+          </p>
+          <button type="submit" class="send">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<?php
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.min.js?ver=1");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/forms.js");
+?>
 </body>
 </html>

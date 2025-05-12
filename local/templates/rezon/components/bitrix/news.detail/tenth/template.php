@@ -54,10 +54,10 @@ $this->setFrameMode(true);
                                 </svg>
                             </span>
                     </div>
-                    <form action="/" id="form_sale" class="modal-form-sale__form">
+                    <form action="/" id="form-sale" class="modal-form-sale__form">
                         <input type="hidden"
                                name="TYPE"
-                               value="<?= $arResult['DISPLAY_PROPERTIES']['BTN_TEXT']['VALUE'] ?>">
+                               value="sale">
                         <label for="" class="modal-form-sale__form--label">
                             Имя*
                             <input type="text" name="NAME">
@@ -75,7 +75,7 @@ $this->setFrameMode(true);
                         <p>Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных.
                             <a href="">Подробнее</a>
                         </p>
-                        <input class="modal-form-sale__form--btn" type="submit" value="Отправить">
+                        <button class="modal-form-sale__form--btn js_sale_form" data-form="form_sale">Отправить</button>
                     </form>
                 </div>
             </div>
@@ -117,24 +117,27 @@ $this->setFrameMode(true);
                             </svg>
                         </span>
                     </div>
-                    <form action="" class="modal-form-sale__form">
+                    <form action="" id="form-rent" class="modal-form-sale__form">
+                        <input type="hidden"
+                               name="TYPE"
+                               value="rent">
                         <label for="" class="modal-form-sale__form--label">
                             Имя*
-                            <input type="text">
+                            <input type="text" name="NAME">
                         </label>
                         <div class="modal-form-sale__form--box">
                             <label for="" class="modal-form-sale__form--label">
                                 Телефон*
-                                <input type="tel">
+                                <input type="tel" name="PHONE">
                             </label>
                             <label for="" class="modal-form-sale__form--label">
                                 Почта*
-                                <input type="email">
+                                <input type="email" name="EMAIL">
                             </label>
                         </div>
                         <p>Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных. <a
                                     href="">Подробнее</a></p>
-                        <input class="modal-form-sale__form--btn" type="submit" value="Отправить">
+                        <button class="modal-form-sale__form--btn js_rent_form" data-form="form_rent">Отправить</button>
                     </form>
                 </div>
             </div>
@@ -176,24 +179,27 @@ $this->setFrameMode(true);
         </svg>
       </span>
                     </div>
-                    <form action="" class="modal-form-sale__form">
+                    <form action="" id="form-purchase" class="modal-form-sale__form">
+                        <input type="hidden"
+                               name="TYPE"
+                               value="purchase">
                         <label for="" class="modal-form-sale__form--label">
                             Имя*
-                            <input type="text">
+                            <input type="text" name="NAME">
                         </label>
                         <div class="modal-form-sale__form--box">
                             <label for="" class="modal-form-sale__form--label">
                                 Телефон*
-                                <input type="tel">
+                                <input type="tel" name="PHONE">
                             </label>
                             <label for="" class="modal-form-sale__form--label">
                                 Почта*
-                                <input type="email">
+                                <input type="email" name="EMAIL">
                             </label>
                         </div>
                         <p>Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных. <a
                                     href="">Подробнее</a></p>
-                        <input class="modal-form-sale__form--btn" type="submit" value="Отправить">
+                        <button class="modal-form-sale__form--btn js_purchase_form" data-form="form_purchase">Отправить</button>
                     </form>
                 </div>
             </div>

@@ -15,6 +15,7 @@ $this->setFrameMode(true);
 <div class="modal-offers">
     <div class="modal-offers__container">
         <div class="modal-offers__header">
+        <div class="modal-offers__header--box">
       <span class="modal-offers__header--title-close">
         <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.87207 1.13623L13.8039 13.068" stroke="#001E5F" stroke-width="0.795454" stroke-linecap="round"/>
@@ -28,7 +29,9 @@ $this->setFrameMode(true);
             <p class="modal-offers__header--subtitle">ANAX Development | Dubai</p>
             <span class="modal-offers__header--text-price">Стоимость от <span>23 590 9309 $</span></span>
         </div>
+        </div>
         <div class="modal-offers__content">
+        <div class="modal-offers__content--box">
             <div class="modal-offers__content--photo">
                 <div class="modal-offers__content--sliders">
                     <div class="modal-offers__content--track">
@@ -37,12 +40,15 @@ $this->setFrameMode(true);
                                 <path d="M10.0225 17.0449L1.97755 9.00001L10.0225 0.955106" stroke="white" stroke-width="1.60898" stroke-linecap="round"/>
                             </svg>
                         </button>
-                        <div class="modal-offers__content--slide"><img src="<?=SITE_TEMPLATE_PATH?>/img/offer-modal1.png" alt="">1</div>
-                        <div class="modal-offers__content--slide"><img src="<?=SITE_TEMPLATE_PATH?>/img/offer-modal2.png" alt="">2</div>
-                        <div class="modal-offers__content--slide"><img src="<?=SITE_TEMPLATE_PATH?>/img/offer-modal2.png" alt="">3</div>
-                        <div class="modal-offers__content--slide"><img src="<?=SITE_TEMPLATE_PATH?>/img/offer-modal2.png" alt="">4</div>
-                        <div class="modal-offers__content--slide"><img src="<?=SITE_TEMPLATE_PATH?>/img/offer-modal2.png" alt="">5</div>
-                        <div class="modal-offers__content--slide"><img src="<?=SITE_TEMPLATE_PATH?>/img/offer-modal2.png" alt="">6</div>
+                        <div class="modal-offers__content--track-slider">
+
+                            <div class="modal-offers__content--slide"><img src="<?=SITE_TEMPLATE_PATH?>/img/offer-modal1.png" alt="">1</div>
+                            <div class="modal-offers__content--slide"><img src="<?=SITE_TEMPLATE_PATH?>/img/offer-modal2.png" alt="">2</div>
+                            <div class="modal-offers__content--slide"><img src="<?=SITE_TEMPLATE_PATH?>/img/offer-modal2.png" alt="">3</div>
+                            <div class="modal-offers__content--slide"><img src="<?=SITE_TEMPLATE_PATH?>/img/offer-modal2.png" alt="">4</div>
+                            <div class="modal-offers__content--slide"><img src="<?=SITE_TEMPLATE_PATH?>/img/offer-modal2.png" alt="">5</div>
+                            <div class="modal-offers__content--slide"><img src="<?=SITE_TEMPLATE_PATH?>/img/offer-modal2.png" alt="">6</div>
+                        </div>
                         <button class="modal-offers__content--btn-next">
                             <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.0225 17.0449L1.97755 9.00001L10.0225 0.955106" stroke="white" stroke-width="1.60898" stroke-linecap="round"/>
@@ -120,7 +126,9 @@ $this->setFrameMode(true);
                 </button>
             </div>
         </div>
+        </div>
         <div class="modal-offers__footer">
+        <div class="modal-offers__footer--box">
             <span class="modal-offers__footer--title">Обсудить со брокером по недвижимости</span>
             <ul class="modal-offers__footer--list">
                 <li class="modal-offers__footer--item"><a href=""><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -139,6 +147,7 @@ $this->setFrameMode(true);
                             <path d="M14.0106 12.8308C13.824 12.4561 13.5378 12.4893 13.2487 12.4893C12.732 12.4893 11.9263 13.1082 11.9263 14.2601C11.9263 15.2041 12.3423 16.2375 13.744 17.7834C15.0968 19.2752 16.8742 20.047 18.3499 20.0207C19.8255 19.9944 20.1291 18.7246 20.1291 18.2958C20.1291 18.1057 20.0111 18.0109 19.9299 17.9851C19.427 17.7438 18.4996 17.2941 18.2886 17.2096C18.0775 17.1251 17.9673 17.2394 17.8988 17.3016C17.7075 17.4839 17.3281 18.0214 17.1983 18.1423C17.0684 18.2632 16.8747 18.202 16.7941 18.1563C16.4976 18.0373 15.6936 17.6797 15.0527 17.0584C14.2601 16.2901 14.2136 16.0257 14.0643 15.7904C13.9448 15.6022 14.0325 15.4867 14.0762 15.4362C14.247 15.2391 14.4828 14.9349 14.5885 14.7838C14.6943 14.6326 14.6103 14.4031 14.56 14.2601C14.3433 13.6453 14.1598 13.1306 14.0106 12.8308Z" fill="white"/>
                         </svg><span>WhatsApp</span></a></li>
             </ul>
+        </div>
         </div>
     </div>
 </div>

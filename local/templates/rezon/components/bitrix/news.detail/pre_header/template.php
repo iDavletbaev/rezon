@@ -14,12 +14,12 @@ $this->setFrameMode(true);
 ?>
 <div class="header__sale">
     <div class="container">
-        <div class="header__special">
+        <a href="<?=$arResult['DISPLAY_PROPERTIES']['BTN_LINK']['VALUE']?>" class="header__special">
             <span><?=$arResult['PREVIEW_TEXT']?></span>
             <span class="header__special--circle"></span>
-            <a href="<?=$arResult['DISPLAY_PROPERTIES']['BTN_LINK']['VALUE']?>">
+            <p >
                 <?=$arResult['DISPLAY_PROPERTIES']['BTN_TEXT']['VALUE']?>
-            </a>
-        </div>
+            </p>
+        </a>
     </div>
 </div>

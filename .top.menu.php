@@ -2,56 +2,56 @@
 $aMenuLinks = Array(
 	Array(
 		"О нас",
-		"#international",
+		"/#international",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Наши партнёры",
-		"#logo",
+		"/#logo",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Для кого",
-		"#services",
+		"/#services",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Почему мы?",
-		"#info",
+		"/#info",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"География",
-		"#map",
+		"/#map",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Услуги",
-		"#services-continuation",
+		"/#services-continuation",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Предложения",
-		"#actual",
+		"/#actual",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"О странах",
-		"#country",
+		"/#country",
 		Array(),
 		Array(),
 		""
